@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Sidebar</title>
+    <link rel="stylesheet" href="sidebar.css">
+</head>
+
+<body>
+    <script src="libs/xlsx.full.min.js"></script>
+    <div class="container">
+        <div class="left">
+            <textarea type="text" id="nameInput" placeholder="Enter url"></textarea>
+        </div>
+        <div class="button" id="submitName">
+            <button>Submit</button>
+        </div>
+        <div class="right">
+            <div id="result"></div>
+        </div>
+        <!-- <button id="submitName">Submit</button> -->
+    </div>
+    <script src="popup.js"></script>
+    <!-- <button id="closeSidebar">Close Sidebar</button>
+    <script>
+        document.getElementById("closeSidebar").addEventListener("click", () => {
+            window.parent.postMessage({ action: "closeSidebar" }, "*");
+        });
+    </script> -->
+    </script>
+</body>
+
+</html>

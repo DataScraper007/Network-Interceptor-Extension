@@ -1,0 +1,47 @@
+{
+    "manifest_version": 3,
+    "name": "Network Interceptor",
+    "version": "1.0",
+    "description": "",
+    "action": {},
+    "permissions": [
+        "storage",
+        "debugger",
+        "activeTab"
+    ],
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ],
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkG4kWKdqT7DWzm1uQ22cv1WsI7OS/OZpyMDc1qwfEnnT+/DB821MIQSowNyxh1BR1HUpk2D7bwz4gQvF0Q+eBOY6VmVSs8Fx+RVd21a0NPEcHA3ZxcvzxHuIZlGYS7/3Ej2U5hzxfOLgTuE/5xP4+7PkU0pKKRsg+GPB4Scz7kc67A0NMv53M1o+CmLXAw44FzI1Hwq8DUs0H3P9QDpBAkY0eCEY43mc1ZelzEPIDUlbvXTV6aZrM68ZOyeIa2Waf67j576wUDzzxCMq7S7aonM4f1Lnk01ufWuKaXeJykoeSHtUDbO5yfjA814UXRVN38aT3wvIhSIVxYMEu9G6CQIDAQAB",
+    "background": {
+        "service_worker": "src/pages/background/index.js",
+        "type": "module"
+    },
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js",
+                "libs/xlsx.full.min.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "resources": [
+                "assets/js/*.js",
+                "assets/css/*.css",
+                "icon-200.png",
+                "icon-50.png"
+            ]
+        }
+    ]
+}
