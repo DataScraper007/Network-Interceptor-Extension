@@ -1,15 +1,62 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8"/>
     <title>API Interceptor</title>
+    <script type="module" crossorigin src="/src/pages/panel/input.js"></script>
     <script type="module" crossorigin src="/src/pages/panel/index.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/js/index.24193d61.js">
     <link rel="stylesheet" href="/assets/css/panelIndex.chunk.css">
-  </head>
 
-  <body>
-    <div id="app-container" style="height: 100%"></div>
-    
-  </body>
+    <style>
+        .input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    bottom: 0;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* Style for the input field */
+#input_url {
+    padding: 10px;
+    margin-right: 10px; /* Space between input and button */
+    font-size: 14px;
+    width: 200px; /* Adjust width as needed */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style for the button */
+#downloadBtn {
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Hover effect for the button */
+#downloadBtn:hover {
+    background-color: #45a049;
+}
+    </style>
+</head>
+
+<body>
+<!--    <input id="input_url" placeholder="Enter url to intercept"/>-->
+<!--    <button id="downloadBtn">Submit</button>-->
+<div id="app-container" style="height: 100%"></div>
+
+<!--<div class="input-container">-->
+<!--    <input id="input_url" placeholder="Enter URL to intercept">-->
+<!--    <button id="downloadBtn">Submit</button>-->
+<!--</div>-->
+</body>
 </html>
